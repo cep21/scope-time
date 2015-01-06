@@ -145,7 +145,6 @@ mod tests {
     use TimeFileSave;
     
     #[test]
-    #[ignore]
     fn test_times() {
         {
             time_3();
