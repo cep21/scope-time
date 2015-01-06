@@ -2,7 +2,7 @@
 
 
 name = "scope_time"
-version = "0.0.2"
+version = "0.0.3"
 authors = ["Jack Lindamood <cep221@gmail.com>"]
 
 description = "A way to profile functions"

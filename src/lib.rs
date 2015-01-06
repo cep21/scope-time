@@ -92,7 +92,7 @@ impl fmt::Show for TimeDB {
 }
 
 
-struct TimeIt {
+pub struct TimeIt {
     start_time: u64,
     name: &'static str,
 }
