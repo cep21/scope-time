@@ -159,7 +159,7 @@ mod tests {
     }
 
     fn time_1() -> u64{
-        let _ = TimeIt::new("time_1");
+        TimeIt::new("time_1");
         let a = 3u64;
         return a * 3;
     }
