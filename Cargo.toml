@@ -1,0 +1,15 @@
+[package]
+
+
+name = "scope-time"
+version = "0.0.1"
+authors = ["Jack Lindamood <cep221@gmail.com>"]
+
+description = "A way to profile functions"
+repository = "https://github.com/cep21/scope-time"
+readme = "README.md"
+keywords = ["profile", "timing"]
+license = "Apache 2.0"
+
+[dependencies]
+time = "*"
