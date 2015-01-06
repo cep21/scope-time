@@ -1,8 +1,8 @@
 [package]
 
 
-name = "scope-time"
-version = "0.0.1"
+name = "scope_time"
+version = "0.0.2"
 authors = ["Jack Lindamood <cep221@gmail.com>"]
 
 description = "A way to profile functions"
