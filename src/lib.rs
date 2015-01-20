@@ -24,7 +24,7 @@ fn time_db() -> TimeDB {
             let timedb = TimeDB {
                 times: Arc::new(Mutex::new(HashMap::new())),
             };
-            TIMEDB = mem::transmute(box timedb);
+            TIMEDB = mem::transmute(Box::new(timedb));
 
             // Make sure to free it at exit
             rt::at_exit(|| {
@@ -85,7 +85,7 @@ impl fmt::Show for TimeDB {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         let ref m = self.times.lock().unwrap();
         for (name, res) in m.iter() {
-            try!(writeln!(f, "{} => {}", name, res));
+            try!(writeln!(f, "{} => {:?}", name, res));
         }
         write!(f, "")
     }
@@ -122,7 +122,7 @@ impl Drop for TimeFileSave {
             Err(_) => {}
             Ok(mut f) => {
                 let m1 : TimeDB = time_db();
-                let _ = write!(&mut f, "{}", m1);
+                let _ = write!(&mut f, "{:?}", m1);
             }
         };
     }
